@@ -1,0 +1,351 @@
+.form-1 {
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+#form-2 {
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.form-1 > .form-group > input {
+    font-size: 16px;
+    width: 60%;
+    padding: 10px 10px;
+    margin: 18px auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(220, 120, 11, 0.6);
+    border-color: rgba(220, 119, 11, 0.4);
+    outline: none;
+}
+#form-2 > .form-group > input {
+    font-size: 16px;
+    width: 60%;
+    padding: 10px 10px;
+    margin: 18px auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(220, 120, 11, 0.6);
+    border-color: rgba(220, 119, 11, 0.4);
+    outline: none;
+}
+.shadow-heading {
+    color: #dc780b;
+    text-shadow: rgb(220, 120, 11, 0.4) 2px 4px;
+    padding: 30px 0 10px 0;
+    text-align: center;
+    font-size: 40px;
+}
+.form-submit {
+    font-size: 16px;
+    text-align: center;
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background: #dc780b;
+    border-radius: 5px;
+    cursor: pointer;
+    @include supportBtn();
+}
+.form-submit:hover {
+    @include btnNav();
+}
+#form-2 {
+    transition: transform linear 0.3s;
+    position: fixed;
+    margin: auto;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 380px;
+    height: 400px;
+    z-index: 400;
+    display: none;
+}
+#form-1 {
+    display: none;
+}
+.form-1 {
+    transition: transform linear 0.3s;
+    position: fixed;
+    margin: auto;
+    top: 100px;
+    left: 0px;
+    right: 0;
+    width: 380px;
+    height: 480px;
+    z-index: 400;
+}
+.form-message {
+    height: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eye {
+    position: absolute;
+    top: 274px;
+    left: 274px;
+    font-size: 16px;
+    color: #8b8b8b;
+}
+.eye:hover {
+    color: #dc780b;
+}
+.eye.hidden {
+    display: none;
+}
+.eye-confirm {
+    position: absolute;
+    top: 354px;
+    left: 274px;
+    font-size: 16px;
+    color: #8b8b8b;
+}
+
+.eye-confirm:hover {
+    color: #dc780b;
+}
+.eye-confirm.hidden-confirm {
+    display: none;
+}
+//
+.eye-log {
+    position: absolute;
+    top: 196px;
+    left: 274px;
+    font-size: 16px;
+    color: #8b8b8b;
+}
+.eye-logConfirm {
+    position: absolute;
+    top: 274px;
+    left: 274px;
+    font-size: 16px;
+    color: #8b8b8b;
+}
+.eye-log:hover {
+    color: #dc780b;
+}
+.eye-log.hiddenLog {
+    display: none;
+}
+.eye-logConfirm:hover {
+    color: #dc780b;
+}
+.eye-logConfirm.hiddenLogConfirm {
+    display: none;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0000004d;
+    display: none;
+}
+#cannel-register {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#cannel-log {
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#header__cart {
+    display: none;
+}
+.header__cart {
+    transition: transform linear 0.3s;
+    position: fixed;
+    margin: auto;
+    top: 100px;
+    left: 900px;
+    right: 0px;
+    width: 360px;
+    height: 380px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 20px 0 rgba(0, 0, 0, 0.6);
+    z-index: 400;
+}
+.cart-img {
+    width: 300px;
+    height: 220px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.cart__btn {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-buy {
+    position: relative;
+    top: 60px;
+    font-size: 16px;
+    text-align: center;
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background: #dc780b;
+    border-radius: 5px;
+    cursor: pointer;
+    @include supportBtn();
+}
+.cannel-cart:hover {
+    @include btnNav();
+}
+.cart-buy:hover {
+    @include btnNav();
+}
+.cannel-cart {
+    position: relative;
+    top: 60px;
+    font-size: 16px;
+    text-align: center;
+    margin: 16px auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background: #dc780b;
+    border-radius: 5px;
+    cursor: pointer;
+    @include supportBtn();
+}
+.menu-modal {
+    transition: transform linear 0.3s;
+    position: fixed;
+    top: 160px;
+    left: 460px;
+    right: 0;
+    width: 600px;
+    height: 400px;
+    // z-index: 400;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+}
+#modal-card {
+    // display: none;
+}
+.menu-modal-content {
+    width: 300px;
+    padding: 30px;
+}
+.menu-modal__img {
+    width: 240px;
+    height: 140px;
+    border-radius: 5px;
+}
+.menu-modal__para {
+    width: 240px;
+    height: 170px;
+    margin-top: 10px;
+    overflow: auto;
+    color: #6e6e6e;
+}
+.menu-modal-active {
+    width: 300px;
+    padding: 30px;
+}
+.menu-modal__name {
+    font-family: 'Philosopher';
+    font-size: 40px;
+    padding: 10px 0;
+    font-weight: 600;
+}
+.menu-modal__stars {
+    font-size: 24px;
+    padding: 10px 0;
+}
+.menu-modal__price {
+    font-size: 28px;
+    padding: 10px 0;
+}
+.reduce {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 26px;
+    margin: 16px 0;
+    position: relative;
+    top: 6px;
+    font-weight: 600;
+}
+.increase {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 26px;
+    margin: 16px 0;
+    position: relative;
+    top: 6px;
+    font-weight: 600;
+}
+.quality {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    border: none;
+    text-align: center;
+    font-size: 26px;
+    outline: none;
+    color: #dc780b;
+}
+.menu-add-card {
+    transition: transform linear 0.3s;
+    margin-top: 12px;
+    color: #ffffff;
+    background-color: #dc780b;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.menu-add-card:hover {
+    @include btnNav();
+}
+#cannel-card:hover {
+    @include btnNav();
+}
+#cannel-card {
+    transition: transform linear 0.3s;
+    margin-top: 12px;
+    margin-left: 30px;
+    color: #ffffff;
+    background-color: #dc780b;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,238 @@
+body {
+    height: 100%;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-image: linear-gradient(#ff4000, #ffa700, #edff00);
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+// CD TU TREN XUN
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+// CD TU PHAI QUA
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+// CD TU DUOI LEN
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+// CD TỪ BÊN TRÁI
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+// FULL TRÊN TRỤC Y
+@keyframes fadeInY {
+    0% {
+        opacity: 0;
+        width: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        transform: translateY(0);
+    }
+}
+// HIỆU ỨNG HIỆN TO DẦN
+@keyframes growth {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+// HIEU CHAY DUOI THANH DH
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: #dc780b;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: transform linear 0.2s, color linear 0.2s,
+        background-color linear 0.2s;
+}
+@keyframes runcontinue {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+.navbar-link:hover {
+    color: #dc780b !important;
+    opacity: 1 !important;
+}
+.navbar-link:focus {
+    color: #d80000 !important;
+    opacity: 1 !important;
+}
+.navbar-link:hover::after {
+    transform: scaleX(1);
+    background-color: #dc780b;
+}
+.navbar-link:focus::after {
+    transform: scaleX(1);
+    background-color: #d80000;
+}
+@mixin supportBtn {
+    transition: transform linear 0.3s, box-shadow linear 0.3s,
+        background-color linear 0.3s, color linear 0.3s;
+}
+@mixin btnNav {
+    color: #dc780b;
+    background-color: #e7e7e7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+@mixin btnAbout {
+    color: #676767 !important;
+    background-color: #f6e3d0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.btn-cart {
+    @include supportBtn();
+}
+.btn-cart:hover {
+    @include btnNav();
+}
+.btn-register {
+    @include supportBtn();
+}
+.btn-register:hover {
+    @include btnNav();
+}
+.btn-login {
+    @include supportBtn();
+}
+.btn-login:hover {
+    @include btnNav();
+}
+.hero-btn-primary {
+    @include supportBtn();
+}
+.hero-btn-primary:hover {
+    @include btnAbout();
+}
+.hero-btn-white {
+    @include supportBtn();
+}
+.hero-btn-white:hover {
+    border: none !important;
+    @include btnAbout();
+}
+.about-btn {
+    @include supportBtn();
+}
+.about-btn:hover {
+    @include btnNav();
+}
+.menu-btn__more {
+    @include supportBtn();
+}
+.menu-btn__more:hover {
+    border: none !important;
+    @include btnNav();
+}
+.info-btn-app-chplay {
+    @include supportBtn();
+}
+.info-btn-app-chplay:hover {
+    border: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.info-btn-app-store {
+    @include supportBtn();
+}
+.info-btn-app-store:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.contact-message-input > button {
+    @include supportBtn();
+}
+.contact-message-input > button:hover {
+    color: #dc780b;
+    background-color: #e7e7e7;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.contact-message-input > button:focus {
+    color: #dc780b;
+    background-color: #e7e7e7;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.col > li > a {
+    transition: color linear 0.2s;
+}
+.col > li > a:hover {
+    color: #ff8400;
+}
+.col__1-2:hover {
+    color: #ff8400;
+}
