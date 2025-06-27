@@ -3,8 +3,9 @@ function Validator(options) {
     // ham thuc hien validate
     function validate(inputElement, rule) {
         var errorMessage = rule.test(inputElement.value);
+
         var errorElement = inputElement.parentElement.querySelector(
-            options.errorSelector
+            options.formMessage
         );
         if (errorMessage) {
             errorElement.innerText = errorMessage;
@@ -29,7 +30,7 @@ function Validator(options) {
                 // xu ly khi nguoi dung nhap
                 inputElement.oninput = function () {
                     var errorElement = inputElement.parentElement.querySelector(
-                        options.errorSelector
+                        options.formMessage
                     );
                     errorElement.innerText = '';
                     inputElement.style.borderColor = 'green';
@@ -48,7 +49,7 @@ Validator.isRequired = function (selector, message) {
         test: function (value) {
             return value.trim()
                 ? undefined
-                : message || 'Vui long nhap truong ten day du nay';
+                : message || 'Vui long nhap ten day du';
         },
     };
 };

@@ -204,7 +204,7 @@
                                 the Fast Food Business. You need not only
                                 Just Food Stalls with Persons but also
                                 specialized equipmentwith Persons but also
-                                Just Food Stalls with Persons..
+                                Just Food Stalls with Persons...
                             </p>
                         </div>
                     </div>
@@ -486,14 +486,26 @@
     <script>
         Validator({
             form: '#form-1',
-            errorSelector: '.form-message',
+            formMessage: '.form-message',
+            formGroup: '.form-group',
             rules: [
                 Validator.isRequired(
                     '#fullname',
-                    'Vui long nhap ten day du'
                 ),
-                Validator.isEmail('#email', 'Vui long nhap email cua ban'),
+                Validator.isRequired(
+                    '#email',
+                    'Vui long nhap email cua ban'
+                ),
+                Validator.isEmail('#email'),
+                Validator.isRequired(
+                    '#password',
+                    'Vui long nhap mat khau cua ban'
+                ),
                 Validator.isPsw('#password'),
+                Validator.isRequired(
+                    '#password_confirm',
+                    'Vui long nhap lai mat khau cua ban'
+                ),
                 Validator.isPswCf(
                     '#password_confirm',
                     function () {
@@ -506,10 +518,23 @@
         });
         Validator({
             form: '#form-2',
-            errorSelector: '.form-message',
+            formMessage: '.form-message',
+            formGroup: '.form-group',
             rules: [
-                Validator.isEmail('#email', 'Vui long nhap email cua ban'),
+                Validator.isRequired(
+                    '#email',
+                    'Vui long nhap email cua ban'
+                ),
+                Validator.isEmail('#email'),
+                Validator.isRequired(
+                    '#passwordLog',
+                    'Vui long nhap mat khau cua ban'
+                ),
                 Validator.isPsw('#passwordLog'),
+                Validator.isRequired(
+                    '#password_confirmLog',
+                    'Vui long nhap lai mat khau cua ban'
+                ),
                 Validator.isPswCf(
                     '#password_confirmLog',
                     function () {
