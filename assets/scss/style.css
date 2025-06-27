@@ -678,6 +678,13 @@ body::-webkit-scrollbar-track {
   width: 100%;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .navbar {
   justify-content: space-between;
 }
